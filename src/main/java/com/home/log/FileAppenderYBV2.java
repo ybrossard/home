@@ -19,12 +19,20 @@ public class FileAppenderYBV2 {
 	}
 
 	public static void write(String message) {
+		writeFile(LocalDateTime.now().format(LOGS_DATE_FORMAT) + " => " + message);
+		writeFile("\n");
+	}
+
+	public static void writeLn() {
+		writeFile("\n");
+	}
+
+	public static void writeFile(String message) {
 		try {
 			Path path = Paths.get(FILE_DIR);
 			OpenOption openOption = path.toFile().exists() ? StandardOpenOption.APPEND : StandardOpenOption.CREATE;
 			try (BufferedWriter bufferedWriter = Files.newBufferedWriter(path, openOption)) {
-				bufferedWriter.write(LocalDateTime.now().format(LOGS_DATE_FORMAT) + " => " + message);
-				bufferedWriter.write("\n");
+				bufferedWriter.write(message);
 			}
 		} catch (IOException caught) {
 			caught.printStackTrace();
