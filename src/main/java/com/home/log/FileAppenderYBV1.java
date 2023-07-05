@@ -4,12 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 
-public class FileAppenderV1YB {
+public class FileAppenderYBV1 {
 
 	private static final String FILE = "C:/temp/OutputFile.txt";
 	private static final SimpleDateFormat FORMAT_DATE_LOGS = new SimpleDateFormat("dd/MM/yyyy - HH':'mm':'ss");
 
-	private FileAppenderV1YB() {
+	private FileAppenderYBV1() {
 	}
 
 	public static void write(String message) {

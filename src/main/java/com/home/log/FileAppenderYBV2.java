@@ -10,12 +10,12 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class FileAppenderV2YB {
+public class FileAppenderYBV2 {
 
 	private static final String FILE_DIR = "C:/temp/OutputFile.txt";
 	private static final DateTimeFormatter LOGS_DATE_FORMAT = DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm:ss");
 
-	public FileAppenderV2YB() {
+	public FileAppenderYBV2() {
 	}
 
 	public static void write(String message) {

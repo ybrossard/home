@@ -6,7 +6,7 @@ public class FileAppenderYBTest {
 	}
 
 	public static void main (String[] args) {
-		FileAppenderV1YB.write("FileAppenderV1YB - Message YB");
-		FileAppenderV2YB.write("FileAppenderV2YB - Message YB");
+		FileAppenderYBV1.write("FileAppenderV1YB - Message YB");
+		FileAppenderYBV2.write("FileAppenderV2YB - Message YB");
 	}
 }
